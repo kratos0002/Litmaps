@@ -3,19 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Location Tracker</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <title>Book Explorer</title>
     <header>
         <h1>LitMaps</h1>
     </header>
-    <main>
-        <div id="book-grid">
-            <!-- Book items will be added here -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="book-container">
+        <div class="book">
+            <img src="https://upload.wikimedia.org/wikipedia/en/e/ed/14_Peaks-_Nothing_Is_Impossible.jpg" alt="Book 1 Title">
+            <h3>14 Peaks</h3>
+            <p>Author: Nirmal Purja</p>
         </div>
-    </main>
-    <footer>
-        <p>© 2023 LitMaps</p>
-    </footer>
-    <script src="main.js"></script>
+        <div class="book">
+            <img src="https://upload.wikimedia.org/wikipedia/en/8/8a/OnTheRoad.jpg" alt="Book 2 Title">
+            <h3>On the Road</h3>
+            <p>Author: Jack Kerouac</p>
+        </div>
+        <div class="book">
+            <img src="https://upload.wikimedia.org/wikipedia/en/8/85/Zen_motorcycle.jpg" alt="Book 3 Title">
+            <h3>Zen and the art of motorcycle maintenance</h3>
+            <p>Author: Robert M. Pirsig</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

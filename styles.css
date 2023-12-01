@@ -1,40 +1,30 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+#book-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.book {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.book img {
+    max-width: 100%;
+    height: auto;
 }
 
 header {
-    background-color: #333;
-    color: white;
     text-align: center;
-    padding: 1em 0;
+    margin: 20px 0;
 }
 
-main {
-    margin: 20px;
+header h1 {
+    font-size: 2em;
+    color: #333;
+    /* Add any other styles you prefer */
 }
 
-#book-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-}
-
-.book-item {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 20px;
-    text-align: center;
-}
-
-footer {
-    text-align: center;
-    padding: 1em 0;
-    background-color: #333;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}

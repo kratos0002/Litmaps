@@ -1,16 +1,34 @@
-document.addEventListener('DOMContentLoaded', () => {
+// Example of dynamically loading book data
+document.addEventListener('DOMContentLoaded', function() {
     const books = [
-        { title: 'Book One', author: 'Author A' },
-        { title: 'Book Two', author: 'Author B' },
-        { title: 'Book Three', author: 'Author C' }
+        {
+            title: "14 Peaks",
+            image: "https://upload.wikimedia.org/wikipedia/en/e/ed/14_Peaks-_Nothing_Is_Impossible.jpg",
+            author: "Nirmal Purja"
+        },
+        {
+            title: "On the Road",
+            image: "https://upload.wikimedia.org/wikipedia/en/8/8a/OnTheRoad.jpg",
+            author: "Jack Kerouac"
+        },
+        {
+            title: "Zen and the Art of Motorcycle Maintenance",
+            image: "https://upload.wikimedia.org/wikipedia/en/8/85/Zen_motorcycle.jpg",
+            author: "Robert M. Pirsig"
+        }
     ];
 
-    const bookGrid = document.getElementById('book-grid');
+    const container = document.getElementById('book-container');
+    container.innerHTML = '';
 
     books.forEach(book => {
-        const div = document.createElement('div');
-        div.className = 'book-item';
-        div.innerHTML = `<h3>${book.title}</h3><p>by ${book.author}</p>`;
-        bookGrid.appendChild(div);
+        const bookDiv = document.createElement('div');
+        bookDiv.className = 'book';
+        bookDiv.innerHTML = `
+            <img src="${book.image}" alt="${book.title}">
+            <h3>${book.title}</h3>
+            <p>Author: ${book.author}</p>
+        `;
+        container.appendChild(bookDiv);
     });
 });
